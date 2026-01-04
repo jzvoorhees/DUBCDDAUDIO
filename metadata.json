@@ -1,5 +1,5 @@
 {
-  "name": "DubSync Studio Pro",
-  "description": "A professional web interface for synchronizing dubbing tracks (PT-BR) to master original audio (EN-US) using RMS analysis and gap filling.",
+  "name": "DubSync Studio Pro (Local)",
+  "description": "Professional offline audio tool for synchronizing PT-BR dubbing with EN-US master tracks using local Python/FFmpeg processing.",
   "requestFramePermissions": []
 }

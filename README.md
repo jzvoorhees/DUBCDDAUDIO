@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# DubSync Studio Pro (Local Engine)
 
-# Run and deploy your AI Studio app
+Uma ferramenta profissional para sincronização de dublagem (PT-BR) com áudio original (EN-US) utilizando análise RMS e processamento multicanal local.
 
-This contains everything you need to run your app locally.
+**ESTE PROJETO É 100% OFFLINE. NÃO REQUER API KEY (GEMINI/OPENAI).**
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Zu_TZwqtUnkzVn9aAVwPq5Vg9dJ0fSHb
+## Arquitetura
+- **Frontend:** React (Interface de Controle)
+- **Backend:** Python + FastAPI (Processamento de Áudio)
+- **Engine:** FFmpeg (Manipulação de Áudio Multicanal)
 
-## Run Locally
+## Pré-requisitos
+1. **Node.js** (Para rodar a interface)
+2. **Python 3.8+** (Para rodar o motor de áudio)
+3. **FFmpeg** instalado e adicionado às variáveis de ambiente (PATH) do sistema.
 
-**Prerequisites:**  Node.js
+## Instalação
 
+### 1. Backend (Python)
+Abra um terminal na pasta do projeto e instale as dependências:
+```bash
+pip install fastapi uvicorn
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 2. Frontend (React)
+No mesmo terminal, instale as dependências do Node:
+```bash
+npm install
+```
+
+## Como Usar
+
+1. **Inicie o Backend:**
+   ```bash
+   python backend.py
+   ```
+   *Mantenha essa janela do terminal aberta.*
+
+2. **Inicie o Frontend:**
+   Abra um **novo** terminal e rode:
+   ```bash
+   npm run dev
+   ```
+
+3. **Acesse:**
+   Abra `http://localhost:5173` (ou a porta indicada) no seu navegador.
+
+4. **Operação:**
+   - Selecione o arquivo Master (EN-US).
+   - Selecione o arquivo Dublado (PT-BR).
+   - Clique em "Initialize Sync".
+   - O Python irá processar o áudio localmente usando FFmpeg.
