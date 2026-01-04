@@ -1,0 +1,5 @@
+{
+  "name": "DubSync Studio Pro",
+  "description": "A professional web interface for synchronizing dubbing tracks (PT-BR) to master original audio (EN-US) using RMS analysis and gap filling.",
+  "requestFramePermissions": []
+}
